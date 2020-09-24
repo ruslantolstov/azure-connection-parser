@@ -3,7 +3,10 @@
 ## What is it
 Simple module to parse Azure Cosmos, SB, EH `Connection String` into set of parameters. 
 
-For example: `Endpoint=sb://foo.servicebus.windows.net/;SharedAccessKeyName=ReadSharedAccessKey;SharedAccessKey=xmbhJlj7/W8t/avPwTev4JVzF4tdfhORdsJy8NcxtmA=`
+### For example: 
+```js
+`Endpoint=sb://foo.servicebus.windows.net/;SharedAccessKeyName=ReadSharedAccessKey;SharedAccessKey=xmbhJlj7/W8t/avPwTev4JVzF4tdfhORdsJy8NcxtmA=`
+```
 
 ## Install
 ```

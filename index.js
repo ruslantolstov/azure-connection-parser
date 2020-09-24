@@ -3,9 +3,11 @@ module.exports = connectionString => {
   const arr = connectionString.split(';').filter(Boolean)
   if (arr[0] === connectionString) return result
   arr.forEach(item => {
-    const r = item.split('=')
-    const isKeyValExist = r.length === 2 && r[0] !== undefined && r[1] !== undefined
-    if (isKeyValExist) return (result[r[0]] = r[1])
+    const keyValue = item.split('=').filter(Boolean)
+    const key = keyValue[0]
+    const value = keyValue[1]
+    const isKeyValExist = keyValue.length === 2 && key !== undefined && value !== undefined
+    if (isKeyValExist) return (result[key] = value)
   })
   return result
 }
